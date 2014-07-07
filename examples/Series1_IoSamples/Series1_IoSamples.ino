@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with XBee-Arduino.  If not, see <http://www.gnu.org/licenses/>.
  */
-#define SPARK	1		//Temporary until this is done by the IDE/CLI
 
 #if defined (SPARK)
 #include "XBee.h"

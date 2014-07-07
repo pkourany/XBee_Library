@@ -19,8 +19,6 @@
 
 #include "XBee.h"
 
-#define SPARK	1		//Temporary until this is done by the IDE/CLI
-
 #if !defined (SPARK)
 #if defined(ARDUINO) && ARDUINO >= 100
 	#include "Arduino.h"

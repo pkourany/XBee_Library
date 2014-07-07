@@ -20,8 +20,6 @@
 #ifndef XBee_h
 #define XBee_h
 
-#define SPARK	1		//Temporary until this is done by the IDE/CLI
-
 #if defined (SPARK)
 #include "application.h"
 #else

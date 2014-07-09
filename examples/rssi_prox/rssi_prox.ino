@@ -46,13 +46,19 @@ uint8_t payload[] = {
 Tx16Request tx = Tx16Request(0xFFFF, payload, sizeof(payload));
 TxStatusResponse txStatus = TxStatusResponse();
 
-
+#if defined (SPARK)
+const int ledPin = D7;      // the pin that the LED is attached to
+const int fakeGND = D6;
+#else
 const int ledPin = 13;      // the pin that the LED is attached to
+char fakeGND = 11;
+#endif
+
 int count = 0;
 int LEDState = 0;
-char fakeGND = 11;
 int numNeighbor = 10;
 int numLights = 4;
+
 int currentNeighbors[] = {
   0,0,0,0,0,0,0,0,0,0};
 

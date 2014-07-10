@@ -85,7 +85,13 @@ KalmanFilter kFilters[10];
 void setup()
 {
   // initialize the serial communication:
+#if defined (SPARK)
+  Serial1.begin(9600);
+  xbee.begin(Serial1);
+#else
+  Serial.begin(9600);
   xbee.begin(Serial);
+#endif
   nss.begin(9600);
   pinMode(ledPin, OUTPUT);
   pinMode(fakeGND, OUTPUT);
